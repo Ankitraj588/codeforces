@@ -1,0 +1,39 @@
+
+
+#include<iostream>
+#include <cmath>
+#include <algorithm>
+#include <vector>
+#define w(x)  int x;cin>>x;while(x--)
+#define  ll long long
+#define f0(n)   for(int i=0;i<n;i++)
+#define f1(n)   for(int i=1;i<n;i++)
+#define big 1e27+9
+#define el endl
+#define pb push_back
+
+using namespace std;
+
+ int gcd(int a, int b)
+   {return (b == 0) ? a : gcd(b, a % b);}
+
+int main(){
+
+w(x){
+   string s;int n;cin>>n;
+   cin>>s;
+   f0(n){
+      cout<<s[i];
+      if((s[i]=='a'||s[i]=='e')&&i<n-2){
+                  if(s[i+2]=='a'||s[i+2]=='e')
+                  {
+                     cout<<".";
+                  }
+            else{ cout<<s[i+1]<<".";i++;}
+      }
+   }
+   cout<<el;
+}
+
+
+return 0;}
